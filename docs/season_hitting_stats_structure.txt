@@ -1,0 +1,67 @@
+{
+  "copyright" : "Copyright 2018 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats" : [ {
+    "type" : {
+      "displayName" : "season"
+    },
+    "group" : {
+      "displayName" : "hitting"
+    },
+    "totalSplits" : 141,
+    "splits" : [ {
+      "season" : "2018",
+      "stat" : {
+        "gamesPlayed" : 136,
+        "groundOuts" : 98,
+        "runs" : 129,
+        "doubles" : 47,
+        "triples" : 5,
+        "homeRuns" : 32,
+        "strikeOuts" : 91,
+        "baseOnBalls" : 81,
+        "intentionalWalks" : 8,
+        "hits" : 180,
+        "hitByPitch" : 8,
+        "avg" : ".346",
+        "atBats" : 520,
+        "obp" : ".438",
+        "slg" : ".640",
+        "ops" : "1.078",
+        "caughtStealing" : 6,
+        "stolenBases" : 30,
+        "stolenBasePercentage" : ".833",
+        "groundIntoDoublePlay" : 5,
+        "numberOfPitches" : 2582,
+        "plateAppearances" : 614,
+        "totalBases" : 333,
+        "rbi" : 80,
+        "sacBunts" : 0,
+        "sacFlies" : 5,
+        "groundOutsToAirouts" : "0.61"
+      },
+      "team" : {
+        "id" : 111,
+        "name" : "Boston Red Sox",
+        "link" : "/api/v1/teams/111"
+      },
+      "player" : {
+        "id" : 605141,
+        "fullName" : "Mookie Betts",
+        "link" : "/api/v1/people/605141",
+        "firstName" : "Mookie",
+        "lastName" : "Betts"
+      },
+      "league" : {
+        "id" : 103,
+        "name" : "AL",
+        "link" : "/api/v1/league/103"
+      },
+      "sport" : {
+        "id" : 1,
+        "link" : "/api/v1/sports/1",
+        "abbreviation" : "MLB"
+      },
+      "rank" : 1
+    } ]
+  } ]
+}

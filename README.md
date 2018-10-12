@@ -10,7 +10,10 @@ Ideally we'd be predicting WAR, but I don't think I have access to
 baseball-reference or fangraph's data.
 
 MLB Gameday API URL:
-https://statsapi.mlb.com/docs/#operation/stats
+https://statsapi.mlb.com/api/v1/stats
+
+Documentation can be found at:
+https://statsapi.mlb.com/docs/#tag/stats
 
 
 NOTES:

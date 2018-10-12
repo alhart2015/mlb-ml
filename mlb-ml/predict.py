@@ -9,8 +9,9 @@ def this_is_a_test():
     return 2
 
 def main():
-    response = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
-    print(response.json)
+    parsed_players = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
+    for p in parsed_players:
+        print(p)
 
 if __name__ == '__main__':
     main()
