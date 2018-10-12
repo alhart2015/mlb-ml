@@ -11,3 +11,8 @@ baseball-reference or fangraph's data.
 
 MLB Gameday API URL:
 https://statsapi.mlb.com/docs/#operation/stats
+
+
+NOTES:
+    - To run tests, run `python -m pytest`. Regular `pytest` won't
+        work because of the venv.

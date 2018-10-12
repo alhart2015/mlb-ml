@@ -3,7 +3,7 @@ Entry point to predict stuff.
 """
 
 def this_is_a_test():
-    print("ointoiu")
+    return 2
 
 def main():
     this_is_a_test()
