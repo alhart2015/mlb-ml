@@ -10,7 +10,7 @@ def this_is_a_test():
 
 def main():
     response = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
-    print(response.text)
+    print(response.json)
 
 if __name__ == '__main__':
     main()
