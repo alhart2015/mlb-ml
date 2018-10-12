@@ -1,11 +1,17 @@
 """
 Test the api library.
 """
+import unittest
 
-import api_handler
+from .context import predict
+
+class ApiHandlerTest(unittest.TestCase):
+
+    def test_pull_player_data(self):
+        api_handler.pull_player_data()
 
 def main():
-    api_handler.pull_player_data()
+    unittest.main()
 
 if __name__ == '__main__':
     main()
