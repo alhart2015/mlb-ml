@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="mlb-ml",
+    name="alhart2015-mlb-ml",
     version="0.0.1",
     author="Alden Hart",
     author_email="not.putting.this.in@nope.com",
