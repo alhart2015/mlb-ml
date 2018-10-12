@@ -14,6 +14,7 @@ def get_hitter_stats(url: str) -> List[str]:
     return a list of players, but for now we'll make do with strings.
     """
     response = requests.get(url)
+    return response
 
 def test():
     print("here")

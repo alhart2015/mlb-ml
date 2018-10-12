@@ -9,10 +9,8 @@ def this_is_a_test():
     return 2
 
 def main():
-    this_is_a_test()
-    gameday_api_handler.test()
-    print(utils.HITTER_STAT_URL)
-
+    response = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
+    print(response.text)
 
 if __name__ == '__main__':
     main()
