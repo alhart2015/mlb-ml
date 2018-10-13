@@ -9,11 +9,13 @@ def this_is_a_test():
     return 2
 
 def main():
-    parsed_players = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
-    for p in parsed_players:
-        print(p)
+    # parsed_players = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
+    # for p in parsed_players:
+    #     print(p)
 
-    print(len(parsed_players))
+    # print(len(parsed_players))
+
+    gameday_api_handler.get_team_info(utils.TEAM_INFO_URL)
 
 if __name__ == '__main__':
     main()

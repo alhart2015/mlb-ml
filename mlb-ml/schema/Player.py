@@ -16,7 +16,9 @@ class Player():
     last_name: str
     rank: int
     stats: Stats
-    team: Team
+    team_id: int
+    team_name: str
+    team_link: str
 
     def __init__(self, season: int, player_id: int, full_name: str, link: str,
                     first_name: str, last_name: str, rank: int, 
@@ -30,7 +32,7 @@ class Player():
                     plate_appearances: int, total_bases: int, rbi: int, sac_bunts: int, 
                     sac_flies: int, ground_outs_to_airouts: float,
                     # team fields
-                    team_id: int, name: str, team_link: str
+                    team_id: int, team_name: str, team_link: str
                     ) -> None:
 
         stats = Stats(games_played, ground_outs, runs, doubles, triples, home_runs,
@@ -39,7 +41,6 @@ class Player():
                         stolen_base_percentage, ground_into_double_play, number_of_pitches,
                         plate_appearances, total_bases, rbi, sac_bunts, sac_flies,
                         ground_outs_to_airouts)
-        team = Team(team_id, name, team_link)
 
         self.season = season
         self.player_id = player_id
@@ -50,7 +51,9 @@ class Player():
         self.rank = rank
 
         self.stats = stats
-        self.team = team
+        self.team_id = team_id
+        self.team_name = team_name
+        self.team_link = team_link
 
     @staticmethod
     def from_splits_json(splits_json: Dict):
@@ -88,7 +91,9 @@ class Player():
         last_name={self.last_name}
         rank={self.rank}
         stats={self.stats}
-        team={self.team}
+        team_id={self.team_id}
+        team_name={self.team_name}
+        team_link={self.team_link}
         )"""
 
 

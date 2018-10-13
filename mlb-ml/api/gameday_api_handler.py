@@ -9,11 +9,13 @@ import requests
 from typing import Dict, List
 
 from schema.player import Player
+from schema.team import Team
 
 def get_hitter_stats(url: str) -> List[Player]:
     """
-    Pull from the MLB Gameday API for hitter stats. Eventually we want this to
-    return a list of players, but for now we'll make do with strings.
+    Pull from the MLB Gameday API for hitter stats.
+
+    todo: figure out how to get all players and not just the top 50
     """
     response = requests.get(url)
     response_json: Dict = response.json()
@@ -27,6 +29,22 @@ def get_hitter_stats(url: str) -> List[Player]:
 
     return players
 
+def get_team_info(url: str) -> List[Team]:
+    """
+    Pull from the MLB Gameday API for teams. This will give you a comprehensive
+    list of all teams, hopefully we can use that to pull all stats for all
+    players on all teams.
+    """
+    response = requests.get(url)
+    response_json: Dict = response.json()
+
+    teams = response_json['teams']
+
+    print(Team.from_json(teams[0]))
+
+    print(len(teams))
+
+    # print(response.text)
 
 def test():
     print("here")
