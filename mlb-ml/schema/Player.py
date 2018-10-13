@@ -80,4 +80,15 @@ class Player():
                 stats['rbi'], stats['sacBunts'], stats['sacFlies'], stats['groundOutsToAirouts'],
                 team['id'], team['name'], team['link'])
 
+    def __str__(self) -> str:
+        return f"""Player(
+        player_id={self.player_id}
+        link={self.link}
+        first_name={self.first_name}
+        last_name={self.last_name}
+        rank={self.rank}
+        stats={self.stats}
+        team={self.team}
+        )"""
+
 

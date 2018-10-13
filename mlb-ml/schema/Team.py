@@ -12,3 +12,10 @@ class Team:
         self.team_id = team_id
         self.name = name
         self.link = link
+
+    def __str__(self) -> str:
+        return f"""Team(
+        \tteam_id={self.team_id}
+        \tname={self.name}
+        \tlink={self.link}
+        )"""

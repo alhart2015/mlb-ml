@@ -13,5 +13,7 @@ def main():
     for p in parsed_players:
         print(p)
 
+    print(len(parsed_players))
+
 if __name__ == '__main__':
     main()

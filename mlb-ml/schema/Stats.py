@@ -68,4 +68,34 @@ class Stats:
         self.sac_bunts = sac_bunts
         self.sac_flies = sac_flies
         self.ground_outs_to_airouts = ground_outs_to_airouts
-    
+
+    def __str__(self) -> str:
+        return f"""Stats(
+            \tgames_played={self.games_played}
+            \tground_outs={self.ground_outs}
+            \truns={self.runs}
+            \tdoubles={self.doubles}
+            \ttriples={self.triples}
+            \thome_runs={self.home_runs}
+            \tstrike_outs={self.strike_outs}
+            \tbase_on_balls={self.base_on_balls}
+            \tintentional_walks={self.intentional_walks}
+            \thits={self.hits}
+            \thit_by_pitch={self.hit_by_pitch}
+            \tavg={self.avg}
+            \tat_bats={self.at_bats}
+            \tobp={self.obp}
+            \tslg={self.slg}
+            \tops={self.ops}
+            \tcaught_stealing={self.caught_stealing}
+            \tstolen_bases={self.stolen_bases}
+            \tstolen_base_percentage={self.stolen_base_percentage}
+            \tground_into_double_play={self.ground_into_double_play}
+            \tnumber_of_pitches={self.number_of_pitches}
+            \tplate_appearances={self.plate_appearances}
+            \ttotal_bases={self.total_bases}
+            \trbi={self.rbi}
+            \tsac_bunts={self.sac_bunts}
+            \tsac_flies={self.sac_flies}
+            \tground_outs_to_airouts={self.ground_outs_to_airouts}
+        )"""
