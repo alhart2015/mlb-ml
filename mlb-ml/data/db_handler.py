@@ -93,7 +93,7 @@ def add_teams_to_db(teams: List[Team], db) -> None:
     """
     cursor = db.cursor()
 
-    print('Creating teams table')
+    # This'll do nothing if the table already exists
     cursor.execute(CREATE_TEAMS_TABLE)
 
     print(f'Adding {len(teams)} teams.')
@@ -109,4 +109,5 @@ def add_teams_to_db(teams: List[Team], db) -> None:
 
     print(f'Finished adding {teams_added} teams.')
     print(f'Skipped {teams_skipped} teams.')
+    print()
 

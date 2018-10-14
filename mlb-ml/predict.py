@@ -12,16 +12,8 @@ def this_is_a_test():
     return 2
 
 def main():
-    # parsed_players = gameday_api_handler.get_hitter_stats(utils.HITTER_STAT_URL)
-    # for p in parsed_players:
-    #     print(p)
 
-    # print(len(parsed_players))
-
-    teams = gameday_api_handler.get_team_info(utils.TEAM_INFO_URL)
-    
-    print(teams[0])
-    print(vars(teams[0]))
+    teams = gameday_api_handler.get_team_info()
 
     print('Connecting to SQLite DB...')
     try:
@@ -29,8 +21,15 @@ def main():
     except sqlite3.OperationalError:
         raise sqlite3.OperationalError(f'Unable to open database file: {db_handler.DB_LOCATION}')
     print('Connected')
+    print()
 
-    db_handler.add_teams_to_db(teams, db)
+    # db_handler.add_teams_to_db(teams, db)
+
+    players_for_nats = gameday_api_handler.get_hitter_stats_for_team_id(120, 2018, utils.REGULAR_SEASON_GAME_TYPE)
+    for p in players_for_nats:
+        print(p)
+
+    print(len(players_for_nats))
 
     db.commit()
     db.close()
