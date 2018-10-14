@@ -40,9 +40,11 @@ def get_team_info(url: str) -> List[Team]:
 
     teams = response_json['teams']
 
-    print(Team.from_json(teams[0]))
+    parsed_teams = []
+    for team in teams:
+        parsed_teams.append(Team.from_json(team))
 
-    print(len(teams))
+    return parsed_teams
 
     # print(response.text)
 

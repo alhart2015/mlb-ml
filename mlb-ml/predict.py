@@ -2,8 +2,11 @@
 Entry point to predict stuff.
 """
 from api import gameday_api_handler
+from data import db_handler
 
 import utils
+
+import sqlite3
 
 def this_is_a_test():
     return 2
@@ -15,7 +18,18 @@ def main():
 
     # print(len(parsed_players))
 
-    gameday_api_handler.get_team_info(utils.TEAM_INFO_URL)
+    teams = gameday_api_handler.get_team_info(utils.TEAM_INFO_URL)
+    for t in teams:
+        print(t)
+
+    print('Connecting to SQLite DB...')
+    try:
+        db = sqlite3.connect(db_handler.DB_LOCATION)
+    except sqlite3.OperationalError:
+        raise sqlite3.OperationalError(f'Unable to open database file: {db_handler.DB_LOCATION}')
+    print('Connected')
+
+
 
 if __name__ == '__main__':
     main()

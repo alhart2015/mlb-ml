@@ -56,13 +56,13 @@ class Team:
         self.location_name = location_name
         self.first_year_of_play = first_year_of_play
 
-        self.league = League(league_id, league_name, league_link)
+        self.league = League(league_id, league_name, league_link, False)
         self.division = Division(division_id, division_name, division_link)
         self.sport = Sport(sport_id, sport_name, sport_link)
 
         self.short_name = short_name
 
-        self.spring_league = League(spring_league_id, spring_league_name, spring_league_link)
+        self.spring_league = League(spring_league_id, spring_league_name, spring_league_link, True)
 
         self.active = active
 
@@ -89,13 +89,9 @@ class Team:
     @staticmethod
     def from_json(json: Dict):
         venue_json: Dict = json['venue']
-
         league_json: Dict = json['league']
-    
         division_json: Dict = json['division']
-
         sport_json: Dict = json['sport']
-
         spring_league_json: Dict = json['springLeague']
 
         return Team(
