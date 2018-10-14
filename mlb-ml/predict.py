@@ -19,8 +19,9 @@ def main():
     # print(len(parsed_players))
 
     teams = gameday_api_handler.get_team_info(utils.TEAM_INFO_URL)
-    for t in teams:
-        print(t)
+    
+    print(teams[0])
+    print(vars(teams[0]))
 
     print('Connecting to SQLite DB...')
     try:
@@ -29,6 +30,10 @@ def main():
         raise sqlite3.OperationalError(f'Unable to open database file: {db_handler.DB_LOCATION}')
     print('Connected')
 
+    db_handler.add_teams_to_db(teams, db)
+
+    db.commit()
+    db.close()
 
 
 if __name__ == '__main__':
